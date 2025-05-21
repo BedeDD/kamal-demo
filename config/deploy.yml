@@ -25,7 +25,7 @@ aliases:
 volumes:
   - "kamal_demo_storage:/rails/storage"
 
-asset_path: /rails/app/assets/builds
+asset_path: /rails/public/assets
 
 builder:
   arch: amd64
