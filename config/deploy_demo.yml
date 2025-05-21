@@ -1,0 +1,33 @@
+---
+service: kamal_demo
+image: itsbede/kamal_demo
+servers:
+  web:
+    - 5.9.21.59
+proxy:
+  ssl: true
+  host: ddrb.ichmachwasmit.computer
+registry:
+  username: itsbede
+  password:
+    - KAMAL_REGISTRY_PASSWORD
+env:
+  secret:
+    - RAILS_MASTER_KEY
+  clear:
+    SOLID_QUEUE_IN_PUMA: false
+aliases:
+  console: app exec --interactive --reuse "bin/rails console"
+  shell: app exec --interactive --reuse "bash"
+  logs: app logs -f
+  dbc: app exec --interactive --reuse "bin/rails dbconsole"
+
+volumes:
+  - "kamal_demo_storage:/rails/storage"
+
+asset_path: /rails/app/assets/builds
+
+builder:
+  arch: amd64
+ssh:
+  user: ben
