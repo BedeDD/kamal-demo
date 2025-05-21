@@ -4,7 +4,7 @@
     <p class="text-xl text-gray-600">Successfully deployed with Kamal!</p>
     <div class="mt-4 inline-block bg-green-100 text-green-800 px-4 py-2 rounded-lg">
       <% if ENV['KAMAL_DEPLOYED_AT'] %>
-        <p>Deployed at: <%= Time.at(ENV['KAMAL_DEPLOYED_AT'].to_i).strftime("%B %d, %Y at %H:%M:%S %Z") %></p>
+        <p>Deployed at: <%= ENV['KAMAL_DEPLOYED_AT'] %></p>
       <% else %>
         <p>Running in development mode</p>
       <% end %>
