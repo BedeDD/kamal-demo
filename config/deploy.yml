@@ -5,7 +5,7 @@ servers:
   web:
     - 5.9.21.59
 proxy:
-  ssl: true
+  ssl: false
   host: ddrb2.ichmachwasmit.computer
 registry:
   username: itsbede
