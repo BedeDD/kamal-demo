@@ -6,7 +6,7 @@ servers:
     - 5.9.21.59
 proxy:
   ssl: false
-  host: ddrb2.ichmachwasmit.computer
+  host: ddrb.ichmachwasmit.computer
 registry:
   username: itsbede
   password:
